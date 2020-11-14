@@ -28,7 +28,8 @@ login=async function() {
 						}
 					}).then(function(response) {
 						response.json().then(data => {
-							document.getElementById('login-form').style.display = 'none';
+							document.getElementById('login-form').style.display='none';
+							document.getElementById('zz').style.display = 'block';
 							document.getElementById('info-form').style.display = 'block';
 							console.log(data);
 							document.getElementById('xm').innerText = "姓名:" + data.base_info.xm;
@@ -43,6 +44,7 @@ login=async function() {
 }
 
 quit=function() {
+	document.getElementById('login-form').style.display='block';
 	document.getElementById('info-form').style.display = 'none';
-	document.getElementById('login-form').style.display = 'block';//返回按钮事件
+	document.getElementById('zz').style.display = 'none';//返回按钮事件
 }
