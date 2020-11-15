@@ -1,6 +1,6 @@
-login=async function() {
-	let username = document.getElementById('username').value;
-	let password = document.getElementById('password').value;
+async function login() {
+	const username = document.getElementById('username').value;
+	const password = document.getElementById('password').value;
 	data = new Object();
 	data.username = username;
 	data.password = password;
@@ -43,8 +43,13 @@ login=async function() {
 	}
 }
 
-quit=function() {
+function quit() {
 	document.getElementById('login-form').style.display='block';
 	document.getElementById('info-form').style.display = 'none';
 	document.getElementById('zz').style.display = 'none';//返回按钮事件
+}
+document.getElementById('zz').onclick=function(){
+	document.getElementById('login-form').style.display='block';
+	document.getElementById('info-form').style.display = 'none';
+	document.getElementById('zz').style.display = 'none';
 }
